@@ -40,7 +40,8 @@ maf: $(SRCDIR)/maf.c
 #	$(NM) $(COFFDIR)/$(NAME).coff
 #	$(OBJDUMP) -D $(COFFDIR)/$(NAME).$(EXT) > $(ASMDIR)/$(NAME).asm
 all:
-	echo DONE
+	$(CC) -S -I${INCDIR} -O2 $(T7_FLAGS) -o $(ASMDIR)/aircomp.asm -fomit-frame-pointer $(SRCDIR)/aircomp.c
+	$(CC) -S -I${INCDIR} -O2 $(T7_FLAGS) -o $(ASMDIR)/airctrldata.asm -fomit-frame-pointer $(SRCDIR)/airctrldata.c
 
 
 clean:
