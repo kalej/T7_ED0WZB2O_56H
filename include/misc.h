@@ -9,4 +9,7 @@
 #define OFFSETOFB(s,m) ((size_t)(unsigned long)&(((s *)0)->m))
 #define OFFSETOFC(s,memb) ((size_t)((char *)&((s *)0)->memb-(char *)0))
 
+#define MIN(a,b) ((a)>(b))?(b):(a)
+#define MAX(a,b) ((a)<(b))?(b):(a)
+
 #endif /* MISC_H_ */
