@@ -1,0 +1,84 @@
+#include <t7types.h>
+
+#ifndef __LIMPIN_H__
+#define __LIMPIN_H__
+typedef struct LimpInType
+{
+	u8 ST_TCMFreezeFrameReq;
+	u16 v_GearBoxOut;
+	u16 n_GearBoxIn;
+	u8 X_ActualGear;
+	u16 I_Egas;
+	i16 n_Engine;
+	i32 t_TDC_TDC;
+	u16 t_IgnDetect1;
+	u16 t_IgnDetect2;
+	i16 U_KnockDiag;
+	i16 U_Knock;
+	i16 Q_AirInlet;
+	i16 T_Engine;
+	i16 T_AirInlet;
+	i16 p_AirAmbient;
+	i16 p_AirInlet;
+	i16 p_AirBefThrottle;
+	i16 AD_ThrottlePot1;
+	i16 AD_ThrottlePot2;
+	i16 A_Throttle;
+	i16 A_Throttle2;
+	i16 AD_PedalPot1;
+	i16 AD_SlavePedalPot1;
+	i16 AD_PedalPot2;
+	i16 X_AccPedal;
+	i16 U_O2SensFront;
+	i16 U_O2SensRear;
+	i16 I_HeatO2SensFront;
+	i16 I_HeatO2SensRear;
+	i16 p_FuelTank;
+	i16 v_Vehicle;
+	i16 v_Vehicle3;
+	i16 n_Wheel;
+	i16 U_Batt;
+	u8 ST_IgnitionKey;
+	u8 ST_BrakeLight;
+	u8 ST_ClutchBrake1;
+	u8 ST_ClutchBrake2;
+	u8 ST_CruiseA1;
+	u8 ST_CruiseB1;
+	u8 ST_CruiseC1;
+	u8 ST_CruiseA2;
+	u8 ST_CruiseB2;
+	u8 ST_CruiseC2;
+	i16 U_Egr;
+	u8 ST_ACReq;
+	u8 ST_ElevatedIdle;
+	u8 ST_CheckEngine;
+	u8 ST_CrankRequest;
+	u8 ST_TCMSport;
+	u8 ST_ReverseGear;
+	i16 V_FuelTank;
+	i16 p_AC;
+	i16 T_AirAmbient;
+	i16 T_ACEvaporator;
+	i16 v_Vehicle2;
+	i16 M_TCMLimitReq;
+	i16 M_TCMLda;
+	i16 t_TCMTrqLimDuration;
+	i16 I_LoadAlternator;
+	u8 X_GearLever;
+	u8 ImmoCode[6];
+	u8 ST_TCSTorqueReq;
+	i16 M_TCSTorqueReq;
+	i16 M_TCSLdaTorqueReq;
+	i16 M_TCSTotalReq;
+	i16 T_TCMOil;
+	u8 ST_TCSLdaTorqueReq;
+	u8 ST_ESPReq;
+	u8 ST_vVehicle;
+	u8 ST_CarType;
+	u8 ST_BoostMeter;
+	u8 ST_TCMCSLU;
+	u8 ST_TCMShiftPattern;
+	u8 ST_TCMIntervType;
+} LimpIn_T;
+extern LimpIn_T LimpIn;
+#endif

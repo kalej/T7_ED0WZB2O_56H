@@ -1,0 +1,66 @@
+#include <t7types.h>
+
+#ifndef __MISSF_H__
+#define __MISSF_H__
+typedef struct MissfType
+{
+	u16 lastXPos;
+	u16 lastYPos;
+	u16 outOfLimDelay;
+	u8 whichFilterActive;
+	u16 nrofStartMisf;
+	u8 ST_FTPActive;
+	u16 nrCVSErrorBlocks;
+	u16 nrTempErrorBlocks;
+	u16 startDelay;
+	u8 startDelayDone;
+	u8 misfStarted;
+	u16 DetectLevel;
+	u8 Detect1Active;
+	u16 nrOfAvCount1Combust;
+	u16 nrOfAvCount2Combust;
+	u8 DetectionActive;
+	u8 KnockBank1Low;
+	u8 KnockBank2Low;
+	u16 Det1HighCount;
+	u16 Det2HighCount;
+	u16 MissfCntCyl1Emis;
+	u16 MissfCntCyl2Emis;
+	u16 MissfCntCyl3Emis;
+	u16 MissfCntCyl4Emis;
+	u16 MissfCntCyl5Emis;
+	u16 MissfCntCyl6Emis;
+	u16 MissfCntCyl1Temp;
+	u16 MissfCntCyl2Temp;
+	u16 MissfCntCyl3Temp;
+	u16 MissfCntCyl4Temp;
+	u16 MissfCntCyl5Temp;
+	u16 MissfCntCyl6Temp;
+	i16 rpmDiffLim;
+	u32 fcut_delay;
+	u32 transient_delay;
+	u16 nrOfTransFilterCombustion;
+	u32 pDiff_delay;
+	u16 nrOfPDiffFilterCombustion;
+	u32 ACFilter_delay;
+	u32 PurgeDiagFilter_delay;
+	u8 lastACRequest;
+	u16 lastPurgeValve;
+	u8 ACFilterON;
+	u8 PurgeDiagFilterON;
+	u8 TransientFilterON;
+	u8 pAirInletDiffFilterON;
+	u8 LowLoadFilterON;
+	u16 nrOfConsecutiveMisf;
+	u16 nrOfFilteredMisfire;
+	u32 SumDetect1Level;
+	u32 SumDetect2Level;
+	i16 pAirInletDiff;
+	u16 M_Limit;
+	u16 nrOfRPMDiffFilteredMisf;
+	u16 nrOfCountedMisfire;
+	u8 ST_Det1HighCount;
+	u8 ST_Det2HighCount;
+} Missf_T;
+extern Missf_T Missf;
+#endif

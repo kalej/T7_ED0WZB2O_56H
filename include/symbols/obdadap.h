@@ -1,0 +1,82 @@
+#include <t7types.h>
+
+#ifndef __OBDADAP_H__
+#define __OBDADAP_H__
+typedef struct OBDAdapType
+{
+	u8 ImmoHistory[20];
+	i16 p_FuelTankComp;
+	i16 p_AirInletComp;
+	i16 p_AirBefThrottleComp;
+	u8 p_AirAdaptionDone;
+	u8 p_AirQuickAdaptionDone;
+	u8 p_InletPressureError;
+	u8 p_BefThrotPressureError;
+	u8 p_AmbientPressureError;
+	u8 compPInletIgnOffDone;
+	u8 compPBefIgnOffDone;
+	u8 compPAmbIgnOffDone;
+	u16 MaxCat;
+	u16 MaxEmis;
+	u16 CatRpm;
+	i16 CatTemp;
+	u16 CatLoad;
+	u16 EmisRpm;
+	i16 EmisTemp;
+	u16 EmisLoad;
+	u16 ThrLimpHomeNr;
+	i16 CatDevDiffFilt;
+	i16 CatEvalValue;
+	i16 CatEvalValueRest;
+	i16 LevEvalValueRest;
+	i16 LevEvalValue;
+	i16 LevResult;
+	u16 obdMISFCVS_n_Engine;
+	u16 obdMISFCVS_m_AirInlet;
+	i16 obdMISFCVS_T_Engine;
+	u16 obdMISFTEMP_n_Engine;
+	u16 obdMISFTEMP_m_AirInlet;
+	i16 obdMISFTEMP_T_Engine;
+	u16 obdLTMFT_n_Engine;
+	u16 obdLTMFT_m_AirInlet;
+	i16 obdLTMFT_T_Engine;
+	u16 obdLTAFT_n_Engine;
+	u16 obdLTAFT_m_AirInlet;
+	i16 obdLTAFT_T_Engine;
+	u16 obdSTFT_n_Engine;
+	u16 obdSTFT_m_AirInlet;
+	i16 obdSTFT_T_Engine;
+	u16 p_TestInlet;
+	u16 p_TestBefThrottle;
+	u16 p_TestAir;
+	u8 faultyBrakeCounter;
+	u32 offsetTime;
+	u16 n_3cylCorrection;
+	i16 O2SensFreqFltCnt;
+	i16 FreqFiltRest;
+	u8 MisfCVSErrorLastDriveCycle;
+	u8 MisfTempErrorLastDriveCycle;
+	i16 FuelLevResult[5];
+	i16 FAdapWhenQAirError;
+	u8 MIU_ErrCnt;
+	u8 TCM_ErrCnt;
+	u8 SAI_Do_Intrusive_Test;
+	u8 triggerVarNr;
+	u8 triggerPosFlank;
+	i32 triggerValue;
+	u8 TCS_ErrCnt;
+	u16 triggerDelay;
+	i16 O2SensFCmbCnt;
+	i32 SAIMainDiagIntA;
+	u8 SAIIntrResult;
+	i16 SAIIntrIntDiff;
+	i32 SAIIntrm_air;
+	u16 MILdistance;
+	u16 T_CoolSystemRes;
+	u16 V_FuelTankFilt;
+	u8 FuelLevelError;
+	u8 ST_ActiveDiagSys;
+	u8 BoostFault;
+} OBDAdap_T;
+extern OBDAdap_T OBDAdap;
+#endif

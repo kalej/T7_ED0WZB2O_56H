@@ -1,0 +1,63 @@
+#include <t7types.h>
+
+#ifndef __PURGECAL_H__
+#define __PURGECAL_H__
+typedef struct PurgeCalType
+{
+	i8 ST_PurgeEnable;
+	i16 p_Diff16XSp[12];
+	i16 p_Diff8XSp[8];
+	i16 ValveMap16[168];
+	i16 ValveMap8[64];
+	i16 q_Flow16YSp[14];
+	i16 q_Flow8YSp[8];
+	i16 PdiffMaxRefFlowTab[12];
+	i16 m_AirLowSp[4];
+	i16 m_AirHighSp[4];
+	i16 m_AirDerLowTab[4];
+	i16 m_AirDerHighTab[4];
+	u16 MaxOLTime1;
+	u16 MaxOLTime2;
+	u16 CycleOffTime;
+	i16 PurgePercentInc;
+	i16 PrgPerLimLow;
+	i16 AdpFuelFacLimLow;
+	i16 AdpFreezeTimeBrake;
+	i16 AdpFreezeTimeFC;
+	u16 AdpFreezeTimeOC;
+	u16 AdpFreezeTimePosTrans;
+	u16 AdpFreezeTimeNegTrans;
+	i16 m_AirInletLim;
+	i8 MaxAdpFreezeIndex;
+	i16 HC100FastFiltFac;
+	i16 HC0FastFiltFac;
+	i16 HC100NormFiltFac;
+	i16 HC0NormFiltFac;
+	i8 HCContEvapFiltFac;
+	i16 HCContLimLow;
+	i16 HCContLimCycle;
+	i16 RampTimeUp;
+	i16 RampTimeUpEvap;
+	i16 P_Const;
+	i16 I_Const;
+	i16 n_Red;
+	i16 n_IdleInt;
+	i16 n_Min;
+	i16 Q_Red;
+	i16 Q_Idle;
+	i16 Q_IdleInt;
+	i16 Q_Min;
+	i8 MaxFuelFac;
+	i8 IdleMaxFuelFac;
+	i16 MaxFlow;
+	i16 IdleMaxFlow;
+	i16 T_VlvOffset100;
+	i16 T_VlvOffset0;
+	i16 VlvOffsetFac;
+	i16 t_FuelInjMin;
+	u8 BoostI_Const;
+	u8 BoostP_Const;
+	i16 T_EngineLim;
+} PurgeCal_T;
+extern PurgeCal_T PurgeCal;
+#endif

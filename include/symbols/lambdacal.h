@@ -1,0 +1,63 @@
+#include <t7types.h>
+
+#ifndef __LAMBDACAL_H__
+#define __LAMBDACAL_H__
+typedef struct LambdaCalType
+{
+	u16 t_limHeatRear;
+	u16 PWM_HeatO2FrontSens[3];
+	u16 t_HeatFront[3];
+	u16 PWM_HeatO2RearSens[3];
+	u16 t_HeatRear[3];
+	u8 ST_AdapEnable;
+	u8 ST_Enable;
+	u8 ST_LambdaDurTrans;
+	u8 MaxConstAdap;
+	u16 RestartTime;
+	u16 RpmSp[16];
+	u16 MinLoadTab[16];
+	u16 MaxLoadTimeTab[16];
+	u16 MaxLoadNormTab[16];
+	u16 TimeOpenLoop;
+	u16 MinRpm;
+	i16 TempTrans;
+	u16 LowSwitch;
+	u16 HighSwitch;
+	u16 MinCombustion;
+	i16 TempSp[16];
+	u16 N_TransDelay[16];
+	u16 N_BeforeHW[16];
+	u16 CombNrTab2[16];
+	i16 TempCthrTab[16];
+	i16 TempOthrTab[16];
+	u16 HeatRpmSP[6];
+	u16 HeatLoadLimTab[6];
+	i16 HeatTempLimCat;
+	u8 FiltFac1;
+	u8 FiltFac2;
+	u8 FiltFac3;
+	u16 t_Adaption;
+	u16 U_AdapMinLim;
+	u16 U_AdapMaxLim;
+	i16 LeanStep[8];
+	i16 RichStep[8];
+	u16 XSp[8];
+	u16 YSp[8];
+	u16 U_AdjStepSP[8];
+	u16 DecStepMap[64];
+	u16 DecRampMap[64];
+	u16 DecCombMap[64];
+	u16 IncStepMap[64];
+	u16 IncRampMap[64];
+	u16 IncCombMap[64];
+	u8 AirFuelRatioLoadSignal;
+	u8 ST_PerformAirFuelRatioCalc;
+	u32 t_FCutDelay;
+	i16 T_RearSondI;
+	i16 m_MaxLoadHyst;
+	i16 RampOutFac;
+	i16 N_NoEnlean;
+	i16 X_NoEnleanMax;
+} LambdaCal_T;
+extern LambdaCal_T LambdaCal;
+#endif

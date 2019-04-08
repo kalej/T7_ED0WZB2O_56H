@@ -1,0 +1,61 @@
+#include <t7types.h>
+
+#ifndef __CATDIAGCAL_H__
+#define __CATDIAGCAL_H__
+typedef struct CatDiagCalType
+{
+	u32 runTime;
+	u16 LoadFiltCoef;
+	u16 AfStartTimerMin;
+	u16 AutAfStartTimerMin;
+	i16 PosDeltaLoadLim;
+	i16 NegDeltaLoadLim;
+	i16 CoolTempLim;
+	u16 LoadHi;
+	u16 AutLoadHi;
+	u16 LoadLo;
+	u16 AutLoadLo;
+	u16 LoadTimerLo;
+	u16 AutLoadTimerLo;
+	u16 LoadTimerHi;
+	u16 AutLoadTimerHi;
+	u16 RpmHi;
+	u16 AutRpmHi;
+	u16 RpmLo;
+	u16 AutRpmLo;
+	u16 RpmTimerLo;
+	u16 AutRpmTimerLo;
+	u16 RpmTimerHi;
+	u16 AutRpmTimerHi;
+	u16 LowLoadTimerLim;
+	u16 AutLowLoadTimerLim;
+	u8 DecrStepLowLoad;
+	u16 StartTimerLim;
+	u16 HlTimerLim;
+	u16 HlTimerStep;
+	u16 IdleTimerLim;
+	u16 FcTimerLim;
+	u16 LimReadyTimer;
+	u16 Ox2FiltCoef;
+	u16 RpmTab[8];
+	u16 LoadTab[8];
+	u16 HiMapOx1CycleTime[64];
+	u16 LoMapOx1CycleTime[64];
+	u8 Ox1DutHiLim;
+	u8 Ox1DutLoLim;
+	u16 Ox2DevMaxMap[64];
+	u16 Stage1Threshold;
+	u16 AutStage1Threshold;
+	u16 RestartLim;
+	u16 ABSFiltCoef;
+	u16 DevDiffFiltCoef;
+	u16 EvalFiltCoef;
+	u16 HlAirFlowMin;
+	u16 AutHlAirFlowMin;
+	u32 Ox2ProcessTimerLim;
+	u16 Ox2SignalLim;
+	u16 Ox2SignalTimeLim;
+	u16 StableTimeLim;
+} CatDiagCal_T;
+extern CatDiagCal_T CatDiagCal;
+#endif

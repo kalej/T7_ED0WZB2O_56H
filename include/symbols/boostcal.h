@@ -1,0 +1,71 @@
+#include <t7types.h>
+
+#ifndef __BOOSTCAL_H__
+#define __BOOSTCAL_H__
+typedef struct BoostCalType
+{
+	u16 n_EngSP[16];
+	u16 P_LimTab[16];
+	u16 I_LimTab[16];
+	u16 Hysteres;
+	u16 SetLoadXSP[8];
+	i16 RegMap[128];
+	i16 IFacMax;
+	i16 PIDXSP[7];
+	i16 PIDYSP[7];
+	i16 PMap[49];
+	i16 IMap[49];
+	i16 DMap[49];
+	u16 m_AirAdapSP[8];
+	u16 PercAdapTab[8];
+	u16 AdapAdjustN;
+	i16 AdapAdjustH;
+	i16 AdapAdjustL;
+	u16 AdapRpmL;
+	u16 AdapRpmH;
+	u16 AdaptAirDiff;
+	u16 AdaptTimeN;
+	u16 AdaptTimeH;
+	u16 AdaptTimeL;
+	u16 MaxOffAdap;
+	u16 VehicleSpeedLim;
+	u16 m_RequestLim;
+	u16 TimeOpenBPV;
+	i16 MaxNegDerHBA;
+	i16 MaxPosDerBPV;
+	i16 MaxNegDerBPV;
+	u16 HighThrLimBPV;
+	u16 LowThrLimBPV;
+	i16 HighAltTabSP[12];
+	i16 SetLoad2XSP[5];
+	i16 HighAltMap[60];
+	i16 PWMTempSP[5];
+	i16 PWMTempTab[5];
+	u8 ST_Enable;
+	u16 AdapBasRpmL;
+	u16 AdapBasRpmH;
+	u16 AdapTimeB1;
+	u16 AdapTimeB2;
+	u16 ReqOffset;
+	i16 AdapMaxDiffP;
+	u16 AdappAirOff;
+	i16 AdapBasicP;
+	i16 AdapBasicN;
+	i16 p_DiffILimXSP[4];
+	i16 p_DiffILimYSP[4];
+	i16 p_DiffILimMap[16];
+	u16 AntiHowlPresLim;
+	u16 AntiHowlPairSP[4];
+	u16 AntiHowlPresTab[4];
+	u16 FilterFactor;
+	i16 AreaCompFilter;
+	u16 n_AreaCompLow;
+	u16 n_AreaCompHigh;
+	u16 v_NoiseReduction;
+	i16 loadDiff_NoiseRedDeact;
+	u16 t_WaitAfterShift;
+	u16 RatioDeltaLim;
+	i16 EnableBoostAdap;
+} BoostCal_T;
+extern BoostCal_T BoostCal;
+#endif

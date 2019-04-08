@@ -1,0 +1,69 @@
+#include <t7types.h>
+
+#ifndef __OBDWORSTCASE_H__
+#define __OBDWORSTCASE_H__
+typedef struct OBDWorstCaseType
+{
+	u16 U_SensPre;
+	i16 Flank_SensFrq;
+	u16 Comb_SensFrq;
+	u16 U_SensPostDead;
+	u16 U_HiSensPost;
+	i16 mulFuelAdap;
+	i16 minMulFuelAdap;
+	i16 addFuelAdap;
+	i16 minAddFuelAdap;
+	u16 t_BLambdaStart;
+	u16 t_LimLambdaStart;
+	u16 t_ALambdaStart;
+	u16 lambdaAtMaxTime;
+	u16 amp_Bypass;
+	i16 m_boostOffset;
+	i16 n_PosIdleOffset;
+	i16 n_NegIdleOffset;
+	u16 minBlockAdaption;
+	u16 maxBlockAdaption;
+	i16 MaxQAirThr;
+	i16 MinQAirThr;
+	i16 MaxQAirHiThr;
+	i16 MinQAirHiThr;
+	i16 T_EngPosStart;
+	i16 T_EngPosActual;
+	i16 T_EngPosLimp;
+	i16 T_EngNegStart;
+	i16 T_EngNegActual;
+	i16 T_EngNegLimp;
+	i16 v_PosChange;
+	i16 v_NegChange;
+	i16 p_AmbInl;
+	i16 p_AmbBef;
+	i16 p_InlBef;
+	u16 n_CombSync;
+	u16 evapLeakFact;
+	u16 Flank_pTank;
+	u16 missfCnt;
+	u16 missf1000;
+	i16 catEvalValue;
+	i16 catv6Result;
+	u16 I_HeatPreHigh;
+	u16 I_HeatPreLow;
+	u16 I_HtPostHigh;
+	u16 I_HtPostLow;
+	i16 p_AirInlDiff;
+	i16 p_AirBefDiff;
+	u8 t_NoVSignal;
+	u8 lambAdapRich;
+	u8 lambAdapLean;
+	i16 LeanClampInt;
+	i16 Vol_FuelMeasure;
+	u16 TAirAtMaxTime;
+	u16 NrOfNegDecrease;
+	u16 nrOfHotStarts;
+	u16 T_EngQCThisDCY;
+	u16 T_EngQCAllDCY;
+	u32 T_EngDeadComb;
+	u16 T_CoolMaxRuntime;
+	u16 T_CoolMinRuntime;
+} OBDWorstCase_T;
+extern OBDWorstCase_T OBDWorstCase;
+#endif
